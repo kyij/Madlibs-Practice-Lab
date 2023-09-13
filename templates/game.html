@@ -7,16 +7,27 @@
 
 <body>
     <h1>Hello. Would you like to play game? ...</h1>
-    <form action="/madlib">
-        Person: <input type= "text" name = "person" > 
-        <br>
-        Color: <input type = "text" name = "color" > 
-        <br>
-        Noun: <input type = "text" name = "noun" > 
-        <br>
-        Adjective: <input type = "text" name = "adjective" > 
-        <br>
-        <input type = "submit">
+    <form action="/madlib" method="POST">
+        Person: <input type="text" name="person">
+        <br />
+        Color: <input type="text" name="color">
+        <br />
+        Noun: <input type="text" name="noun">
+        <br />
+        Adjective: <input type="text" name="adjective">
+        <br />
+        Hobbies: 
+        <br />
+        <input type="checkbox" name="hobbies" value="sports" id="sports">
+        <label for= "sports"> Sports</label>
+        <br />
+        <input type="checkbox" name="hobbies" value="cooking" id="cooking">
+        <label for ="cooking" > Cooking</label>
+        <br />
+        <input type="text" name = "hobbies"> Other
+        <br />
+        <br />
+        <input type="submit">
     </form>
 
 </body>

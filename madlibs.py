@@ -51,7 +51,7 @@ def greet_person():
 
     return render_template("compliment.html", person=player, compliment=compliment)
 
-@app.route("/game", methods = ['POST'])
+@app.route("/game")
 def show_madlib_form():
     """Show form to play Madlibs"""
 
@@ -65,6 +65,8 @@ def show_madlib_form():
     else:
         return "Sorry, that was an invalid input."
 
+
+madlibs_list = ["madlib.html", "madlib1.html" , "madlib2.html", "madlib3.html"]
 @app.route("/madlib", methods = ['POST'])
 def show_madlib():
     """Show madlib"""
@@ -72,13 +74,15 @@ def show_madlib():
     color = request.form.get("color")
     noun = request.form.get("noun")
     adjective = request.form.get("adjective")
+    hobbies = request.form.get("hobbies")
 
     return render_template(
-        "madlib.html",
+        choice(madlibs_list),
         person=person,
         color=color,
         noun=noun,
-        adjective=adjective)
+        adjective=adjective,
+        hobbies=hobbies)
 
 if __name__ == "__main__":
     # Setting debug=True gives us error messages in the browser and also

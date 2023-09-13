@@ -3,12 +3,16 @@
 
 <head>
   <title>A Madlib!</title>
+
+  <link rel="stylesheet" href="/static/madlibs.css">
 </head>
 
 <body>
-    There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab.
-    When {{ person }} went to pick it up, it burst into flames in a totally
-    {{ adjective }} way.
+  <p>There once was a <span class="urgent">{{ color }} {{ noun }}</span> sitting in the Hackbright Lab.
+    When <span class="urgent">{{ person }}</span> went to pick it up, it burst into flames in a totally
+    <span class="urgent">{{ adjective }}</span> way.
+    Then <span class="urgent">{{person}}</span> went to participate in some <span class="urgent">{{ hobbies }}</span>.
+  </p>
 </body>
 
 </html>
